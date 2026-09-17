@@ -13,8 +13,13 @@ let notes = [
   { id: 8, title: 'Setup Docker Hub', body: 'Registry untuk menyimpan image hasil build.' },
   { id: 9, title: 'Setup SSH Key', body: 'Deploy key khusus untuk akses VPS dari CI/CD.' },
   { id: 10, title: 'Setup GitHub Secrets', body: 'Simpan kredensial sensitif untuk workflow.' },
+  { id: 11, title: 'Setup Commitlint', body: 'Wajibkan format Conventional Commits.' },
+  { id: 12, title: 'Setup ESLint', body: 'Cek kualitas dan konsistensi kode JavaScript.' },
+  { id: 13, title: 'Setup Prettier', body: 'Rapikan format kode secara otomatis.' },
+  { id: 14, title: 'Setup EJS View', body: 'Render halaman HTML dari template.' },
+  { id: 15, title: 'Setup VPS', body: 'Siapkan Docker, network proxy, dan SSH key deploy.' },
 ];
-let nextId = 11;
+let nextId = 16;
 
 function findAll() {
   return notes;
