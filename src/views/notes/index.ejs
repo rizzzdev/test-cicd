@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<h1>Notes</h1>
+<a class="btn" href="/notes/new">+ Tambah Note</a>
+
+<ul class="note-list">
+  <% notes.forEach(function(note) { %>
+    <li>
+      <a href="/notes/<%= note.id %>"><%= note.title %></a>
+    </li>
+  <% }); %>
+</ul>
+
+<%- include('../partials/footer') %>

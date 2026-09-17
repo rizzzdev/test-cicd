@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<a href="/notes">&larr; Kembali</a>
+<h1>Tambah Note</h1>
+
+<form action="/notes" method="POST" class="note-form">
+  <label for="title">Judul</label>
+  <input type="text" id="title" name="title" required />
+
+  <label for="body">Isi</label>
+  <textarea id="body" name="body" rows="5" required></textarea>
+
+  <button type="submit" class="btn">Simpan</button>
+</form>
+
+<%- include('../partials/footer') %>
