@@ -32,7 +32,10 @@ npm run lint
 npm run format
 ```
 
-Husky menjalankan `lint-staged` otomatis di setiap `git commit` (eslint --fix + prettier pada file yang di-stage).
+Husky menjalankan 2 hook otomatis:
+
+- `pre-commit` — `lint-staged` (eslint --fix + prettier pada file yang di-stage).
+- `commit-msg` — `commitlint`, mewajibkan format [Conventional Commits](https://www.conventionalcommits.org/) (mis. `feat: ...`, `fix: ...`, `chore: ...`). Commit dengan pesan yang tidak sesuai format akan ditolak.
 
 ## Docker
 
@@ -54,6 +57,6 @@ Panduan lengkap setup VPS, Docker Hub, GitHub Secrets, dan troubleshooting: liha
 
 ## Alur kerja developer
 
-1. Ubah kode → `git add` → `git commit` (Husky menjalankan lint-staged).
+1. Ubah kode → `git add` → `git commit -m "feat: ..."` (Husky menjalankan lint-staged + validasi format commit).
 2. `git push origin main`.
 3. GitHub Actions otomatis build & push image, lalu deploy ke VPS.
